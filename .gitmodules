@@ -1,0 +1,3 @@
+[submodule ".vim/pack/wyattpkg/start/vim-airline"]
+	path = .vim/pack/wyattpkg/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
