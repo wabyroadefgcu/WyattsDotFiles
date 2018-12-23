@@ -1,3 +1,15 @@
 [submodule ".vim/pack/wyattpkg/start/vim-airline"]
 	path = .vim/pack/wyattpkg/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/wyattpkg/start/supertab"]
+	path = .vim/pack/wyattpkg/start/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/pack/wyattpkg/start/SearchComplete"]
+	path = .vim/pack/wyattpkg/start/SearchComplete
+	url = https://github.com/vim-scripts/SearchComplete.git
+[submodule ".vim/pack/wyattpkg/start/snipmate"]
+	path = .vim/pack/wyattpkg/start/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule ".vim/pack/wyattpkg/start/easymotion"]
+	path = .vim/pack/wyattpkg/start/easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
