@@ -23,12 +23,6 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
-" the plugins.
-let mapleader=","
-
 set backup
 
 " Set location of backup and undo files, the .vimfiles folder may need
@@ -47,6 +41,10 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+
+
+" =============== Other Settings ====================
+
 set history=500
 set ruler
 set showcmd
@@ -58,6 +56,20 @@ set visualbell
 
 colo slate
 
+" ================ Scrolling ========================
+
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+set clipboard=unnamed
+
+
+
+" ================ Status Bar and Airline ===========
+"set laststatus=2
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+"filetype off                  " required
+let g:airline_powerline_fonts = 1
 
 
 
@@ -71,7 +83,7 @@ set linebreak    "Wrap lines at convenient points
 " ================ Completion =======================
 
 set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+"set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
@@ -83,16 +95,6 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-" ================ Scrolling ========================
-
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
-set clipboard=unnamed
-
-"set laststatus=2
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-"filetype off                  " required
 
 
 
@@ -108,4 +110,14 @@ endif
 "
 " The matchit plugin makes the % command work better, but it is not backwards
 " compatible.
-packadd matchit
+" packadd matchit
+
+" Hack to fix arrow keys while typing into find after /
+" imap OA <ESC>ki
+" imap OB <ESC>ji
+" imap OC <ESC>li
+" imap OD <ESC>hi
+" set t_ku=OA
+" set t_kd=OB
+" set t_kl=OD
+" set t_kr=OC
