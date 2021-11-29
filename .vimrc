@@ -25,6 +25,11 @@ endif
 
 set backup
 
+" Set location of .vim folder so it resides inside WyattsDotFiles repository
+set runtimepath=~/.config/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.config/.vim/after
+set packpath=~/.config/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.config/.vim/after
+
+
 " Set location of backup and undo files, the .vimfiles folder may need
 " to be created before this works. Not using .vim so I don't accidentally
 " push all of my temp files to repository
